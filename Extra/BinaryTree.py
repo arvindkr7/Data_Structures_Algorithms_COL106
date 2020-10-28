@@ -15,22 +15,22 @@ class BinaryTree:
 
 	def insert(self,key,value):
 		newNode = BSTNode(key,value)
-		if self.root==None:
+		if self.root is None:
 			self.root = newNode
 			return None
-		elif self.find(key)==None:
+		elif self.find(key) is None:
 			cur = self.root;
 			p = None
 			while cur!=None:
 				p = cur
 				if key<cur.key:
-					if cur.left==None:
+					if cur.left is None:
 						cur.left=newNode
 						break
 					else:
 						cur = cur.left
 				else:
-					if cur.right==None:
+					if cur.right is None:
 						cur.right=newNode
 						break
 					else:
